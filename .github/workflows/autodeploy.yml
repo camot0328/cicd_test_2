@@ -57,7 +57,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_KEY }}
-          script_stop: |
+          script: |
             rm -f /home/ubuntu/prod/cur/app.jar
             mv /home/ubuntu/prod/tobe/app.jar /home/ubuntu/prod/cur/app.jar
             cd /home/ubuntu/prod/cur
