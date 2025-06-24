@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class MainController {
   @GetMapping("/")
   public String main() {
-    return "This is cicdtest-02 자동 배포!!!";
+    return "This is cicdtest-02 자동 배포!!! -- version 3.0";
   }
 }
