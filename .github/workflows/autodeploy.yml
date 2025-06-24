@@ -5,9 +5,16 @@ on:
       - main
 
 jobs:
-  My-Auto-CICD-job:
+  autodeploy-job:
     runs-on: ubuntu-latest
 
     steps:
-      - name: test
-        run: echo "test"
+      - name: github repository
+        uses: actions/checkout@v4
+
+      - name: JDK17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
